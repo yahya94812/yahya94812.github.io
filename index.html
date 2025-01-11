@@ -3,210 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YahyaWorld</title>
+    <title>Welcome</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
-            background: linear-gradient(45deg, #000000, #1a1a1a);
-            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            overflow: hidden;
-            font-family: 'Arial', sans-serif;
-            position: relative;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
         }
-
-        .container {
-            position: relative;
-            text-align: center;
-        }
-
-        .text-container {
-            position: relative;
-            display: inline-block;
-        }
-
-        .main-text {
-            font-size: clamp(2rem, 4.5vw, 5rem);
-            color: transparent;
-            -webkit-text-stroke: 2px #fff;
-            text-transform: uppercase;
-            letter-spacing: 5px;
-            position: relative;
-            animation: glow 2s ease-in-out infinite alternate;
-            white-space: nowrap;
-        }
-
-        .text-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 0%;
-            height: 100%;
-            color: #00ff88;
-            overflow: hidden;
-            animation: fillText 4s ease-in-out infinite;
-        }
-
-        .text-overlay span {
-            font-size: clamp(2rem, 4.5vw, 5rem);
-            text-transform: uppercase;
-            letter-spacing: 5px;
-            white-space: nowrap;
-        }
-
-        .particles {
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            pointer-events: none;
-            z-index: -1;
-        }
-
-        .particle {
-            position: absolute;
-            background: radial-gradient(circle, rgba(0, 255, 136, 0.8) 10%, transparent 70%);
-            border-radius: 50%;
-            opacity: 0;
-            animation: float var(--duration) ease-in-out infinite;
-            filter: blur(3px);
-        }
-
-        .datetime {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            color: #fff;
-            font-size: 1rem;
-            opacity: 0.7;
-        }
-
-        @keyframes glow {
-            0% {
-                text-shadow: 0 0 10px rgba(255,255,255,0.3),
-                           0 0 20px rgba(255,255,255,0.3),
-                           0 0 30px rgba(0,255,136,0.3);
-            }
-            100% {
-                text-shadow: 0 0 20px rgba(255,255,255,0.5),
-                           0 0 40px rgba(255,255,255,0.5),
-                           0 0 60px rgba(0,255,136,0.5);
-            }
-        }
-
-        @keyframes fillText {
-            0%, 100% {
-                width: 0%;
-            }
-            50% {
-                width: 100%;
-            }
-        }
-
-        @keyframes float {
-            0% {
-                transform: translateY(100vh) translateX(0);
-                opacity: 0;
-            }
-            50% {
-                opacity: 0.8;
-            }
-            100% {
-                transform: translateY(-20vh) translateX(var(--translateX));
-                opacity: 0;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .main-text, .text-overlay span {
-                -webkit-text-stroke: 1px #fff;
-            }
-            .datetime {
-                font-size: 0.8rem;
-            }
+        h1 {
+            color: #333;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="particles"></div>
-        <div class="text-container">
-            <div class="main-text">Welcome to Yahya-World</div>
-            <div class="text-overlay">
-                <span>Welcome to Yahya-World</span>
-            </div>
-        </div>
-    </div>
-    <div class="datetime" id="datetime"></div>
-
-    <script>
-        function createParticles() {
-            const particlesContainer = document.querySelector('.particles');
-            const numberOfParticles = 30; // Reduced for better performance
-
-            for (let i = 0; i < numberOfParticles; i++) {
-                createSingleParticle();
-            }
-        }
-
-        function createSingleParticle() {
-            const particlesContainer = document.querySelector('.particles');
-            const particle = document.createElement('div');
-            particle.className = 'particle';
-            
-            const size = Math.random() * 15 + 5;
-            particle.style.width = `${size}px`;
-            particle.style.height = `${size}px`;
-            particle.style.left = `${Math.random() * 100}%`;
-            
-            const duration = Math.random() * 5 + 3;
-            particle.style.setProperty('--duration', `${duration}s`);
-            
-            const translateX = (Math.random() - 0.5) * 200;
-            particle.style.setProperty('--translateX', `${translateX}px`);
-            
-            particlesContainer.appendChild(particle);
-            
-            particle.addEventListener('animationend', () => {
-                particle.remove();
-                createSingleParticle();
-            });
-        }
-
-        function updateDateTime() {
-            const now = new Date();
-            const options = { 
-                timeZone: 'UTC',
-                year: 'numeric',
-                month: '2-digit',
-                day: '2-digit',
-                hour: '2-digit',
-                minute: '2-digit',
-                second: '2-digit',
-                hour12: false
-            };
-            document.getElementById('datetime').textContent = 
-                `UTC: ${now.toLocaleString('en-US', options)}`;
-        }
-
-        // Initialize
-        createParticles();
-        updateDateTime();
-        setInterval(updateDateTime, 1000);
-
-        // Cleanup function to prevent memory leaks
-        window.addEventListener('beforeunload', () => {
-            const particles = document.querySelectorAll('.particle');
-            particles.forEach(particle => particle.remove());
-        });
-    </script>
+    <h1>Welcome to YahyaWorld.github.io</h1>
 </body>
 </html>
