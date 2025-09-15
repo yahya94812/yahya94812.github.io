@@ -1,0 +1,81 @@
+{
+    "name": "Mohammed Yahya",
+    "_role": "Computer science student",
+    "tagline": "Building performant, scalable AI systems and web applications.",
+    "location": "Remote / Worldwide",
+    "email": "yahya94812@gmail.com",
+    "_phone": "+1 555 123 4567",
+    "social": {
+        "github": "https://github.com/yahya94812",
+        "linkedin": "https://linkedin.com/in/mohammed-yahya-b8264630a",
+        "twitter": "",
+        "_website": "https://example.com"
+    },
+    "about": "I am a full stack developer passionate about creating robust, user-centric solutions across the web platform. and also a computer science student with a strong foundation in algorithms, data structures, and software engineering principles. I enjoy tackling complex problems and continuously learning new technologies to enhance my skill set.",
+    "skills": [
+        { "name": "JavaScript", "level": 90 },
+        { "name": "TypeScript", "level": 85 },
+        { "name": "React", "level": 88 },
+        { "name": "Node.js", "level": 84 },
+        { "name": "Python", "level": 78 },
+        { "name": "CSS / Tailwind", "level": 80 }
+    ],
+    "projects": [
+        {
+            "title": "MindCare",
+            "description": "for maintaining good mental health",
+            "tech": ["React", "TypeScript", "Node"],
+            "url": "https://yahya94812.github.io/MindCare-AI/dist",
+            "repo": "https://github.com/yahya94812/MindCare-AI"
+        },
+        {
+            "title": "ShareFastly",
+            "description": "A file sharing web application for faster sharing",
+            "tech": ["Node", "PostgreSQL", "Docker"],
+            "repo": "https://github.com/ShareFastly"
+        }
+    ],
+    "experience": [
+        {
+            "company": "CSE student at university",
+            "_role": "Senior Engineer",
+            "start": "2022",
+            "end": "Present",
+            "summary": "Leading development of core platform services and having a strong foundation in computer science principles.",
+            "achievements": [
+                "Developed user-centric applications addressing real-world and personal workflow challenges, validating solutions through iterative feedback"
+                
+            ]
+        }
+    ],
+    "education": [
+        {
+            "school": "HKE University",
+            "degree": "B.E. Computer Science",
+            "start": "2023",
+            "end": "2027"
+        }
+    ],
+    "services": [
+        {
+            "title": "Web Application Development",
+            "description": "Full lifecycle development using modern frameworks.",
+            "icon": "🛠️"
+        },
+        {
+            "title": "API Architecture",
+            "description": "Designing robust, scalable backend systems.",
+            "icon": "🔗"
+        }
+    ],
+    "_testimonials": [
+        {
+            "name": "Jane Smith",
+            "role": "CTO, StartupX",
+            "quote": "Delivered exceptional quality under tight deadlines.",
+            "avatar": ""
+        }
+    ]
+}
+
+
